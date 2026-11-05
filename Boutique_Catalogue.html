@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-container": "#fedeb2", "background": "#fcf9f3", "inverse-surface": "#31312d", "on-tertiary-fixed": "#201b15", "surface": "#fcf9f3", "on-error-container": "#93000a", "secondary-fixed": "#fedeb2", "primary-fixed": "#e9e1dd", "on-tertiary-fixed-variant": "#4c463e", "inverse-primary": "#ccc5c1", "on-secondary": "#ffffff", "surface-container-low": "#f6f3ed", "secondary": "#725b38", "surface-bright": "#fcf9f3", "tertiary-fixed-dim": "#cfc5bb", "inverse-on-surface": "#f3f0ea", "surface-container-highest": "#e5e2dc", "outline-variant": "#d0c4be", "on-error": "#ffffff", "on-primary-fixed-variant": "#4a4643", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline": "#7e7570", "tertiary": "#000000", "tertiary-container": "#201b15", "on-secondary-fixed": "#281800", "surface-dim": "#dcdad4", "surface-tint": "#625d5b", "primary-fixed-dim": "#ccc5c1", "error": "#ba1a1a", "on-background": "#1c1c18", "on-secondary-fixed-variant": "#584323", "on-secondary-container": "#78603e", "on-tertiary-container": "#8b827a", "surface-container-high": "#ebe8e2", "on-surface-variant": "#4d4540", "on-primary-fixed": "#1e1b19", "surface-variant": "#e5e2dc", "secondary-fixed-dim": "#e0c298", "surface-container": "#f0eee8", "on-primary-container": "#888380", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "primary": "#000000", "tertiary-fixed": "#ece1d7", "primary-container": "#1e1b19", "on-surface": "#1c1c18" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-desktop": "2.5rem", "space-sm": "0.75rem", "space-lg": "2.25rem", "space-xl": "4rem", "margin": "1.25rem", "gutter": "1.5rem", "space-md": "1.25rem", "margin-tablet": "2.5rem", "margin-desktop": "5rem", "space-xs": "0.375rem" }, fontFamily: { "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, fontSize: { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["17px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "300" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.16em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="BIF Cosmétique Logo" class="h-20 w-20 object-contain" src="logo.jpg"/>
+    <div class="flex flex-col">
+  </div></div><div class="flex items-center gap-1"><button aria-label="Rechercher" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><a class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors" data-path="panier-&amp;-commande" href="panier.html"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-1.5 w-4 h-4 bg-primary text-on-primary font-label-sm text-[9px] rounded-full flex items-center justify-center leading-none">2</span></a><button aria-label="Profil utilisateur" class="w-11 h-11 flex items-center justify-center pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqGRK_eQ79mpukWy6tvXyflf2ee7YUNqRXZcG8cKLyMfs0GOiiwd0X0ufwtcBUWKwf_84qx_h5Jozs1mXsezsitN66Sw6UiKpRKQbk5BamSs-L2GTDNVmCiW5nNePYgEa4pZwXv--5MKSGH7iO90tJ9ahdrhLa3SsGM2YSOz3m1nSax_FeDUd-y9NqX12PIwi6UalDoCaSYKhy5g1GULHlYIpFcSny1-cXF6wJOvM"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Collection Editorial Banner Header -->
+<section class="px-margin pt-4 pb-3 flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Édition Permanente</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">18 créations</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Le Vestiaire Beauté &amp; Parfums</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">
+      Formulations d'exception aux actifs précieux, protection solaire invisible et signatures olfactives solaires.
+    </p>
+</section>
+<!-- Horizontal Filter Pills Carousel -->
+<div class="w-full overflow-x-auto no-scrollbar px-margin py-2 flex items-center gap-2">
+<button class="filter-pill active whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md uppercase tracking-wider bg-primary text-on-primary transition-all duration-300 shadow-sm flex items-center gap-1.5" data-category="all">
+<span>Tous</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+</button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all duration-300" data-category="spf">
+      Écrans Solaires SPF50
+    </button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all duration-300" data-category="teint">
+      Anti-cernes &amp; Teint
+    </button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all duration-300" data-category="soins">
+      Soins Hydratants
+    </button>
+<button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label-md text-label-md uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-all duration-300" data-category="parfums">
+      Haute Parfumerie
+    </button>
+</div>
+<!-- Sort & Refine Control Bar -->
+<div class="px-margin py-3 flex items-center justify-between gap-3 bg-surface-container-low/70 my-2">
+<!-- Filter Modal Trigger -->
+<button class="flex items-center gap-1.5 font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors py-1" id="open-filter-btn">
+<span class="material-symbols-outlined text-[17px] text-secondary">tune</span>
+<span>Filtres avancés</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</button>
+<!-- Sort Dropdown Trigger -->
+<div class="relative">
+<button class="flex items-center gap-1 font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors py-1" id="sort-menu-btn">
+<span class="text-on-surface-variant">Trier par :</span>
+<span class="font-semibold text-on-surface">Nouveautés</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Active Filter Micro-Tags (Removable) -->
+<div class="px-margin pb-2 flex items-center gap-2 overflow-x-auto no-scrollbar">
+<div class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm uppercase">
+<span>Fini Invisible</span>
+<button class="flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm uppercase">
+<span>Teintes Médiums</span>
+<button class="flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</div>
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-secondary underline underline-offset-2 whitespace-nowrap">
+      Réinitialiser
+    </button>
+</div>
+<!-- Luxury Product 2-Column Grid -->
+<section class="px-margin pt-2 pb-6">
+<div class="grid grid-cols-2 gap-x-3 gap-y-6">
+<!-- Product Card 1 -->
+<article class="flex flex-col group relative bg-surface-container-lowest rounded-lg p-2.5 shadow-sm transition-all duration-300">
+<!-- Visual Presentation -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low rounded-DEFAULT overflow-hidden flex items-center justify-center">
+<img alt="Fluide Protecteur Invisible SPF 50+" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist luxury matte sunscreen pump bottle of BIF Cosmétique on an alabaster stone plinth with gentle morning sun shadows, subtle warm sand tones, architectural high-end cosmetics photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSltaH_0sxckODqxYzvSAAJyaSwiFY0MJHgQOdRCbWwmjEyvaok7cJRetI60ExsIAGCEr0C4sdzLl2A8IE_64wnb1_8tUDkIMiWwIKWRh5zT-1stT8GpdPi9bvm22n8MLd8S79r547ydvkBRmLjpRlmaiPenxVzYipc8KSWKR8BQwaLviWfZKlF7MEfqO0x-H6011XvEtaAHdApifPzeCOJogY6RKirtU1cIY_uY"/>
+<!-- Badge -->
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-widest px-2 py-0.5 rounded-DEFAULT shadow-sm">
+            Bestseller
+          </span>
+<!-- Wishlist Toggle -->
+<button aria-label="Ajouter aux favoris" class="favorite-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<!-- SPF Tag -->
+<span class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded-DEFAULT">
+            SPF 50+ PA++++
+          </span>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 pt-2.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Écran Invisible</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">Fluide Protecteur SPF 50+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Fini mat velouté sans trace blanche</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">46,00 DT</span>
+<button class="add-to-cart-btn bg-primary text-on-primary hover:bg-tertiary-container font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1.5 rounded-DEFAULT flex items-center gap-1 transition-all active:scale-95" data-name="Fluide Protecteur Invisible">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="flex flex-col group relative bg-surface-container-lowest rounded-lg p-2.5 shadow-sm transition-all duration-300">
+<!-- Visual Presentation -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low rounded-DEFAULT overflow-hidden flex items-center justify-center">
+<img alt="Fluide Teinté Bonne Mine SPF 50+" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sophisticated tinted beauty fluid glass dropper bottle by BIF Cosmétique resting against warm travertine stone with light amber liquid drops, editorial beauty campaign aesthetic, warm nude undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZydUE28eJCFFA8MZcmCUMCBnPxKh6ozgo3emkbd2fUEpZ4PVq1dCMd7w0Ym0j9SPXjzgWksGZDUu-KaIAmqzgeGWNfkDdL5sPD9bIsYuenF537Sbx5zOGtlOOlNhssDuVWSIm7kIT20dtzkD5V4CRXhuI2j-Q3sMcP5NxZ5XNT7JOFUjpGLie-H79aWJ3QDFBpt9L_ssS-dH110_adeKhoQP8BEtyS5Ql0juirug"/>
+<!-- Badge -->
+<span class="absolute top-2 left-2 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-widest px-2 py-0.5 rounded-DEFAULT">
+            Nouveau
+          </span>
+<!-- Wishlist Toggle -->
+<button aria-label="Ajouter aux favoris" class="favorite-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<!-- Shade Dots Preview -->
+<div class="absolute bottom-2 left-2 flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-sm px-1.5 py-1 rounded-full">
+<span class="w-2.5 h-2.5 rounded-full bg-[#E5B895]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#BA875E]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#825434]"></span>
+<span class="font-label-sm text-[9px] text-on-surface pl-0.5">+3</span>
+</div>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 pt-2.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Soin Teinté</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">Fluide Teinté Bonne Mine</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Éclat satiné 6 teintes fusion</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">48,00 DT</span>
+<button class="add-to-cart-btn bg-primary text-on-primary hover:bg-tertiary-container font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1.5 rounded-DEFAULT flex items-center gap-1 transition-all active:scale-95" data-name="Fluide Teinté Bonne Mine">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="flex flex-col group relative bg-surface-container-lowest rounded-lg p-2.5 shadow-sm transition-all duration-300">
+<!-- Visual Presentation -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low rounded-DEFAULT overflow-hidden flex items-center justify-center">
+<img alt="Correcteur Cernes &amp; Imperfections" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Slim luxury concealer wand tube with glossy black cap and clear bottle highlighting luminous creamy formula, studio beauty lighting, warm champagne palette, editorial Vogue style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJuTJo13rDRRh_It4aZe3KnK-86VEtMGKtMUAn8utkuBpkrvfNdg-BK_ngy7qpdieECtt9VAKGL9R9rM9-k3ztkFKtKDUo5Kdv3Q8MZdi8BVHRFTTW1gt6YjZiKCBMm2ZukaBUYxs9PKU03_XeENmg8MLtWPhtTcdckfQW42WoI3kAAHRT1vi3trnwHc8fY-Z6vNhTHsxwc7Xcn-m2onaKJOAot4AxU86UOGfEnt8"/>
+<!-- Badge -->
+<span class="absolute top-2 left-2 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest px-2 py-0.5 rounded-DEFAULT">
+            Soin Caféiné
+          </span>
+<!-- Wishlist Toggle -->
+<button aria-label="Ajouter aux favoris" class="favorite-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 pt-2.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Correction Ciblée</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">Correcteur Haute Couvrance</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Formule caféine lissante 16h</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">38,00 DT</span>
+<button class="add-to-cart-btn bg-primary text-on-primary hover:bg-tertiary-container font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1.5 rounded-DEFAULT flex items-center gap-1 transition-all active:scale-95" data-name="Correcteur Cernes">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="flex flex-col group relative bg-surface-container-lowest rounded-lg p-2.5 shadow-sm transition-all duration-300">
+<!-- Visual Presentation -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low rounded-DEFAULT overflow-hidden flex items-center justify-center">
+<img alt="Sérum Anti-cernes Défatigant Nuit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Dark amber glass cosmetic apothecary bottle with gold pipette for eye serum, surrounded by delicate rose de mai petals on pale cream marble, premium French skincare composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtc2bZRp3Jp_hNc_06UZaNuqWUIw20p5yYchFKcwkpb1s_s8_PVRydjMakGQJhuBpdleeRmjaG45PnE-Ith91-pvydmbXloaZwj8a-J9MIj9nJQrrpOuVxS5yLcmHPI6qIMlb1d7mEvsuOpzbWY4DPEUwSNZrFe7pdmLd6XpbVb0P1GK_8xdOc8ozblskb0yyO7qFeNHL9ZbNsQ_TJ5rBpqw7SR1l0q7_FTW6yAbs"/>
+<!-- Badge -->
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-widest px-2 py-0.5 rounded-DEFAULT shadow-sm">
+            Bestseller
+          </span>
+<!-- Wishlist Toggle -->
+<button aria-label="Ajouter aux favoris" class="favorite-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 pt-2.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Régénération Nuit</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">Sérum Cernes Défatigant</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Complexe peptides &amp; rose de mai</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">52,00 DT</span>
+<button class="add-to-cart-btn bg-primary text-on-primary hover:bg-tertiary-container font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1.5 rounded-DEFAULT flex items-center gap-1 transition-all active:scale-95" data-name="Sérum Cernes Nuit">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 5 -->
+<article class="flex flex-col group relative bg-surface-container-lowest rounded-lg p-2.5 shadow-sm transition-all duration-300">
+<!-- Visual Presentation -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low rounded-DEFAULT overflow-hidden flex items-center justify-center">
+<img alt="Baume Hydratant Velours Absolu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Heavy heavyweight frosted glass cream jar with a brushed gold lid, soft rich buttery texture visible inside, warm alabaster surface, high-end French luxury skincare still life." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA6gu2GSIgdyFEibG8OenTcAMZY0sqEvMiZbj7UqAloo7NyVcArtxMOhfrSP3lDVekyOIkHAkzANkgmVAvJ7TBNupvdRWReUrYvSL2svuuFOAr9isE-7Mku9t5em6oEaEf8_VEfWT_B3E7mrGM2TaVFZ864SBWhOWlN0IqEXRQFjDt1SDWCwFdt9cYAaPCWKEyRmmGxCGvX_J4qmfXMmGpjOIkJ3J_r2-e4RkQcoA"/>
+<!-- Wishlist Toggle -->
+<button aria-label="Ajouter aux favoris" class="favorite-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 pt-2.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Nutrition Intense</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">Baume Velours Absolu</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Texture fondante réconfortante</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">58,00 DT</span>
+<button class="add-to-cart-btn bg-primary text-on-primary hover:bg-tertiary-container font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1.5 rounded-DEFAULT flex items-center gap-1 transition-all active:scale-95" data-name="Baume Hydratant Velours">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 6 -->
+<article class="flex flex-col group relative bg-surface-container-lowest rounded-lg p-2.5 shadow-sm transition-all duration-300">
+<!-- Visual Presentation -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low rounded-DEFAULT overflow-hidden flex items-center justify-center">
+<img alt="Eau de Parfum Ambre Solaire" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sculptural heavy crystal perfume bottle filled with glowing golden amber fragrance, black lacquered stopper, casting warm amber sunbeams onto silk fabric, haute perfumery campaign." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5O_k7dHo3DY8jTLg9XxU83fPGR9ZakMo-D8h97CT4Wqku1XApYYGizhYzHdstbXIgifz5PabnPMshRbHQhTMuVfCyLNPtL6ZXinpit6ahgryztNA_1cQkzaO8rSwDAQlYHM1dLOfpdoEED8PZaOB18tW91T5r595jJiHseYl3pV57UG7adry8l--UaDw8L3AqgM0pjAwC6HGW6SgWaBlhitNLvGW07ddSUz9_Ywk"/>
+<!-- Badge -->
+<span class="absolute top-2 left-2 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-widest px-2 py-0.5 rounded-DEFAULT">
+            Flacon d'Art
+          </span>
+<!-- Wishlist Toggle -->
+<button aria-label="Ajouter aux favoris" class="favorite-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-error transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded-DEFAULT">
+            100 ml
+          </span>
+</div>
+<!-- Info -->
+<div class="flex flex-col flex-1 pt-2.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Haute Parfumerie</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 mt-0.5">Ambre Solaire 100ml</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Notes solaires, vanille &amp; encens</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">140,00 DT</span>
+<button class="add-to-cart-btn bg-primary text-on-primary hover:bg-tertiary-container font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1.5 rounded-DEFAULT flex items-center gap-1 transition-all active:scale-95" data-name="Eau de Parfum Ambre Solaire">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Editorial Routine Diagnostic Teaser Card -->
+<section class="px-margin mb-6">
+<div class="bg-surface-container-high rounded-xl p-5 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Protocole Personnalisé</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">
+        Trouvez votre nuance exacte et votre écran de protection idéal.
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        3 questions pour déterminer votre phototype, vos besoins d'hydratation et le fini parfait.
+      </p>
+<div class="pt-1">
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider px-4 py-2.5 rounded-DEFAULT transition-transform active:scale-95 shadow-sm" data-path="diagnostic-teint-&amp;-routine" href="#">
+<span>Lancer le diagnostic teint</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Bottom Drawer: Advanced Filters (Toggled by Button) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex-col justify-end transition-opacity" id="filter-drawer">
+<div class="w-full bg-surface rounded-t-2xl p-margin flex flex-col max-h-[751px] overflow-y-auto shadow-2xl">
+<!-- Header -->
+<div class="flex items-center justify-between pb-3">
+<span class="font-headline-sm text-headline-sm text-on-surface">Filtres Raffinés</span>
+<button class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface" id="close-filter-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Fini & Protection -->
+<div class="py-3 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Finition &amp; Écran</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="filter-choice active px-3 py-2.5 rounded-DEFAULT bg-primary text-on-primary font-label-md text-label-md text-center">
+            Invisible (Sans traces)
+          </button>
+<button class="filter-choice px-3 py-2.5 rounded-DEFAULT bg-surface-container text-on-surface font-label-md text-label-md text-center">
+            Teinté Lumineux
+          </button>
+<button class="filter-choice px-3 py-2.5 rounded-DEFAULT bg-surface-container text-on-surface font-label-md text-label-md text-center">
+            Matifiant Velouté
+          </button>
+<button class="filter-choice px-3 py-2.5 rounded-DEFAULT bg-surface-container text-on-surface font-label-md text-label-md text-center">
+            Hydratation 24h
+          </button>
+</div>
+</div>
+<!-- Carnations & Nuances -->
+<div class="py-3 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Spectre de Carnations</span>
+<div class="flex items-center justify-between gap-2 py-1">
+<!-- Shade 1 -->
+<div class="flex flex-col items-center gap-1.5 flex-1 cursor-pointer">
+<span class="w-9 h-9 rounded-full bg-[#f6dec9] shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-[#553a25]">check</span>
+</span>
+<span class="font-label-sm text-[10px] text-on-surface uppercase">Porcelaine</span>
+</div>
+<!-- Shade 2 -->
+<div class="flex flex-col items-center gap-1.5 flex-1 cursor-pointer">
+<span class="w-9 h-9 rounded-full bg-[#e3be97] shadow-sm"></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Clair</span>
+</div>
+<!-- Shade 3 -->
+<div class="flex flex-col items-center gap-1.5 flex-1 cursor-pointer">
+<span class="w-9 h-9 rounded-full bg-[#c38c5b] shadow-sm"></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Médium</span>
+</div>
+<!-- Shade 4 -->
+<div class="flex flex-col items-center gap-1.5 flex-1 cursor-pointer">
+<span class="w-9 h-9 rounded-full bg-[#8c5731] shadow-sm"></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Doré</span>
+</div>
+<!-- Shade 5 -->
+<div class="flex flex-col items-center gap-1.5 flex-1 cursor-pointer">
+<span class="w-9 h-9 rounded-full bg-[#4e2d1a] shadow-sm"></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Riche</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-4 pb-2 flex items-center gap-3">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-DEFAULT font-label-md text-label-md uppercase tracking-widest text-center shadow-sm active:scale-98" id="apply-filter-btn">
+          Appliquer les filtres (12)
+        </button>
+<button class="px-4 py-3 bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-DEFAULT">
+          Effacer
+        </button>
+</div>
+</div>
+</div>
+<!-- Micro Delight Toast for Cart -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-3" id="cart-toast">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check_circle</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase" id="toast-text">Ajouté au panier</span>
+</div>
+</div>
+<script>
+  // Filter pill toggling
+  const pills = document.querySelectorAll('.filter-pill');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'active', 'shadow-sm');
+        p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        const dot = p.querySelector('span.rounded-full');
+        if (dot) dot.remove();
+      });
+      pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      pill.classList.add('bg-primary', 'text-on-primary', 'active', 'shadow-sm');
+      
+      const newDot = document.createElement('span');
+      newDot.className = 'w-1.5 h-1.5 rounded-full bg-secondary-container';
+      pill.appendChild(newDot);
+    });
+  });
+
+  // Favorite toggle delight
+  const favoriteButtons = document.querySelectorAll('.favorite-toggle');
+  favoriteButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isFilled = icon.style.fontVariationSettings?.includes("'FILL' 1");
+      if (isFilled) {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        icon.classList.remove('text-error');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        icon.classList.add('text-error');
+        btn.classList.add('scale-125');
+        setTimeout(() => btn.classList.remove('scale-125'), 200);
+      }
+    });
+  });
+
+  // Cart Micro-interaction Toast
+  const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+  const cartToast = document.getElementById('cart-toast');
+  const toastText = document.getElementById('toast-text');
+  let toastTimer;
+
+  addToCartButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const prodName = btn.getAttribute('data-name');
+      toastText.textContent = prodName + ' ajouté au panier';
+      cartToast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+      cartToast.classList.add('opacity-100', 'translate-y-0');
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        cartToast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+        cartToast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2400);
+    });
+  });
+
+  // Drawer Toggle
+  const openFilter = document.getElementById('open-filter-btn');
+  const closeFilter = document.getElementById('close-filter-btn');
+  const applyFilter = document.getElementById('apply-filter-btn');
+  const filterDrawer = document.getElementById('filter-drawer');
+
+  function openDrawer() {
+    filterDrawer.classList.remove('hidden');
+    filterDrawer.classList.add('flex');
+  }
+
+  function closeDrawer() {
+    filterDrawer.classList.add('hidden');
+    filterDrawer.classList.remove('flex');
+  }
+
+  openFilter?.addEventListener('click', openDrawer);
+  closeFilter?.addEventListener('click', closeDrawer);
+  applyFilter?.addEventListener('click', closeDrawer);
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(26,23,21,0.03)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors" data-path="home-/-vitrine" href="index.html"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-0.5">Accueil</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 transition-colors text-primary font-semibold" data-path="boutique-catalogue" href="Boutique_Catalogue.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-0.5">Boutique</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors" data-path="diagnostic-teint-&amp;-routine" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-0.5">Diagnostic</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors" data-path="favoris" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-0.5">Favoris</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors" data-path="panier-&amp;-commande" href="panier.html"><span class="material-symbols-outlined text-[20px]">local_mall</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-0.5">Panier</span></a></div></nav></body></html>

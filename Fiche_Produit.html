@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-container": "#fedeb2", "background": "#fcf9f3", "inverse-surface": "#31312d", "on-tertiary-fixed": "#201b15", "surface": "#fcf9f3", "on-error-container": "#93000a", "secondary-fixed": "#fedeb2", "primary-fixed": "#e9e1dd", "on-tertiary-fixed-variant": "#4c463e", "inverse-primary": "#ccc5c1", "on-secondary": "#ffffff", "surface-container-low": "#f6f3ed", "secondary": "#725b38", "surface-bright": "#fcf9f3", "tertiary-fixed-dim": "#cfc5bb", "inverse-on-surface": "#f3f0ea", "surface-container-highest": "#e5e2dc", "outline-variant": "d0c4be", "on-error": "#ffffff", "on-primary-fixed-variant": "#4a4643", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "outline": "#7e7570", "tertiary": "#000000", "tertiary-container": "#201b15", "on-secondary-fixed": "#281800", "surface-dim": "#dcdad4", "surface-tint": "#625d5b", "primary-fixed-dim": "#ccc5c1", "error": "#ba1a1a", "on-background": "#1c1c18", "on-secondary-fixed-variant": "#584323", "on-secondary-container": "#78603e", "on-tertiary-container": "#8b827a", "surface-container-high": "#ebe8e2", "on-surface-variant": "#4d4540", "on-primary-fixed": "#1e1b19", "surface-variant": "#e5e2dc", "secondary-fixed-dim": "#e0c298", "surface-container": "#f0eee8", "on-primary-container": "#888380", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "primary": "#000000", "tertiary-fixed": "#ece1d7", "primary-container": "#1e1b19", "on-surface": "#1c1c18" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter-desktop": "2.5rem", "space-sm": "0.75rem", "space-lg": "2.25rem", "space-xl": "4rem", "margin": "1.25rem", "gutter": "1.5rem", "space-md": "1.25rem", "margin-tablet": "2.5rem", "margin-desktop": "5rem", "space-xs": "0.375rem" }, fontFamily: { "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, fontSize: { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["17px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "300" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.16em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-2"><button aria-label="Retour" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors -ml-2" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><img alt="BIF Cosmétique Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U1_1t1b3y8YT86TKWdplKSls9CJFg8FfbnIQx5YCJtqsY7HOXd2s96cwLxOsQ1Xv_LRye0HBKhHqxiTNoYS2aZ2FSL0twpXH1bes_2BdXXwy4ltdrkaHvzvo5pvRhiRz277FT9oC3gBrxq9m9ATbnWf_vBeQXen-TCALvvpMycLh1Q96FxC1cqi2P-UKwj73pD_LEh-njcLS_HgqZKSTYnHLFcRg4QbiiS2uy1eGJg"/><h1 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 leading-none pl-1">Fiche Produit</h1></div><div class="flex items-center gap-1"><a class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary transition-colors" data-path="panier-&amp;-commande" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-1.5 w-4 h-4 bg-primary text-on-primary font-label-sm text-[9px] rounded-full flex items-center justify-center leading-none">2</span></a><button aria-label="Profil utilisateur" class="w-11 h-11 flex items-center justify-center pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqGRK_eQ79mpukWy6tvXyflf2ee7YUNqRXZcG8cKLyMfs0GOiiwd0X0ufwtcBUWKwf_84qx_h5Jozs1mXsezsitN66Sw6UiKpRKQbk5BamSs-L2GTDNVmCiW5nNePYgEa4pZwXv--5MKSGH7iO90tJ9ahdrhLa3SsGM2YSOz3m1nSax_FeDUd-y9NqX12PIwi6UalDoCaSYKhy5g1GULHlYIpFcSny1-cXF6wJOvM"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-28">
+<div class="relative w-full bg-surface-container-low px-margin pt-4 pb-6 overflow-hidden">
+<div class="flex items-center justify-between mb-3 z-10 relative">
+<span class="bg-surface-container-lowest text-on-surface px-2.5 py-1 rounded-full font-label-sm text-label-sm tracking-widest uppercase shadow-sm">
+        SPF 50+ • Broad Spectrum
+      </span>
+<button aria-label="Ajouter aux favoris" class="w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur text-on-surface flex items-center justify-center shadow-sm transition-transform active:scale-90" id="wishlist-btn">
+<span class="material-symbols-outlined text-[20px] transition-colors" id="wishlist-icon">favorite_border</span>
+</button>
+</div>
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-sm flex items-center justify-center bg-surface-container">
+<img class="w-full h-full object-cover transition-opacity duration-300" data-alt="Bespoke luxury frosted glass sunscreen dropper bottle on warm ivory linen pedestal with golden typography BIF Cosmétique Le Bouclier Solaire, soft Parisian morning sunlight, warm sand and alabaster tones, architectural editorial skincare photograph, studio lighting" id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2zKufL5aJ9zup9P_3LAgE9o3qNUCIxQ4-K3jWmMfQ5t3VoduSvMdFOJzhij_Jr9BHUsN307xwuLyl82zfC3ISe3rlljr_Ejwp8BX0JRf0435bJF-LAdGftwx3JWoIlqNfP4LN3h_umAPfn9BBe3bLjnMR7cjJ9o_0YrZHe-v_ZCc6G9N-uzgrwV3DWSYpu2G3miR_Khu-dcy65bhPzJu2-f_id8xQRDwU5-obmAw"/>
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary" id="dot-0"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant" id="dot-1"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant" id="dot-2"></span>
+</div>
+</div>
+<div class="flex gap-2.5 mt-3 justify-center">
+<button class="w-14 h-14 rounded-lg overflow-hidden bg-surface-container-lowest p-0.5 shadow-sm focus:outline-none transition-all ring-1 ring-primary" id="thumb-0" onclick="switchGallery(0)">
+<img class="w-full h-full object-cover rounded-DEFAULT" data-alt="Close-up of minimalist frosted glass cosmetic bottle with golden typography and luxury dropper cap in warm beige aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_XMdzNQoIVFWcvO0ybRwHJaYHFAtx9x37qf3H3UWqs6JL4mjcxy8VMkYV6wxsN9ePXo7RuW_940GOV74N1ebrcSkbu8fl0u0oelnKltsWr2feQ38WsB8j9enNg1iH3c7sQ1f4dPXpmTy6ZeEVPjuUHaPfu3-ky8bPxsx4IKQ38cvftxmsQwzPoc0kEapu-QTNgEZYmgRVf_83aI01EByu2JTlywkUJy9b1gW9uec"/>
+</button>
+<button class="w-14 h-14 rounded-lg overflow-hidden bg-surface-container-lowest p-0.5 shadow-sm opacity-60 focus:outline-none transition-all" id="thumb-1" onclick="switchGallery(1)">
+<img class="w-full h-full object-cover rounded-DEFAULT" data-alt="Velvety drops of sun fluid lotion texture on tanned woman hand, golden hour light, luminous natural dewy finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvlgyM4ORF5ZLeNaNFT_R0NlWZuMSEaNvJpVG3nmZ3DHU-UhZpchzXjuBvWnWf0KQZs35zLV6fgrNmK6gP9Hz2ORZaYFavvS9YWKmrfePYKk4O0dXF4wf5DBpPwA_kJfca3L5E0YzmUN9Vm8jR0NgL1DyLKy2lJ3azsnXYtcVEniWVgUoRDGyQcQyLkWEPi6gUG7stWqRFqEF2BoigVOuwKUyCvqlSw6lFKME30n8"/>
+</button>
+<button class="w-14 h-14 rounded-lg overflow-hidden bg-surface-container-lowest p-0.5 shadow-sm opacity-60 focus:outline-none transition-all" id="thumb-2" onclick="switchGallery(2)">
+<img class="w-full h-full object-cover rounded-DEFAULT" data-alt="Editorial portrait of model with radiant healthy sun-protected skin, soft natural makeup, golden ambient glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKGHVh5FiF2F7IQJo0vQWgkDU0NfTVjGWMtWsxfFLFEEWmJ5bGV4l_D8nyeJWjBsKn0Pnm4XHE7ZR-TPENqRdWjLPMe4cOREkUCULrnwkPMAS9xT5sCZk0bodfMsMw6ncvVsIvumWLfHz_bkt1AKP4Vaqg6VV2kHdOV-lL_L2D_z3DeooN3ft92lZ-SWU8-we9iamO_IGvysDFFTXEHA0sJqQKOwcB98STmn_wpbM"/>
+</button>
+</div>
+</div>
+<div class="px-margin pt-6 flex flex-col gap-5">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<div class="flex items-center text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">• 284 avis vérifiés</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Le Fluide Solaire Quotidien SPF 50+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Bouclier haute protection invisible &amp; activateur d’éclat cellulaire.</p>
+<div class="flex items-baseline gap-2.5 mt-3">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">48,00 DT</span>
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">50 ml • 0.96 DT / ml</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Sélection du Fini</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/50 px-2 py-0.5 rounded-full" id="selected-finish-badge">
+          100% Invisible
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<button class="flex flex-col items-start p-3 rounded-lg text-left transition-all bg-primary text-on-primary shadow-sm" id="btn-finish-invisible" onclick="selectFinish('invisible')">
+<div class="flex items-center justify-between w-full mb-1">
+<span class="font-label-lg text-label-lg tracking-wider">Fini Invisible</span>
+<span class="material-symbols-outlined text-[18px]" id="icon-check-invisible">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm opacity-80 leading-snug">Mat velouté sans trace blanche</span>
+</button>
+<button class="flex flex-col items-start p-3 rounded-lg text-left transition-all bg-surface-container text-on-surface shadow-sm" id="btn-finish-tinted" onclick="selectFinish('tinted')">
+<div class="flex items-center justify-between w-full mb-1">
+<span class="font-label-lg text-label-lg tracking-wider">Fini Teinté Éclat</span>
+<span class="material-symbols-outlined text-[18px] opacity-0" id="icon-check-tinted">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Glow seconde peau unifiant</span>
+</button>
+</div>
+<div class="hidden flex-col gap-2.5 pt-2" id="shade-selector-container">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Nuance sélectionnée :</span>
+<span class="font-label-md text-label-md font-semibold text-secondary" id="shade-name">02 Sable Doré</span>
+</div>
+<div class="flex items-center justify-between px-1 py-1">
+<button aria-label="01 Albâtre" class="shade-pill w-8 h-8 rounded-full flex items-center justify-center transition-all bg-[#EEDCC8] shadow-sm" onclick="selectShade('01 Albâtre', '#EEDCC8', 0)"></button>
+<button aria-label="02 Sable Doré" class="shade-pill w-8 h-8 rounded-full flex items-center justify-center transition-all bg-[#DCBE9B] shadow-sm ring-2 ring-offset-2 ring-primary" onclick="selectShade('02 Sable Doré', '#DCBE9B', 1)"></button>
+<button aria-label="03 Miel Chaud" class="shade-pill w-8 h-8 rounded-full flex items-center justify-center transition-all bg-[#BF9B73] shadow-sm" onclick="selectShade('03 Miel Chaud', '#BF9B73', 2)"></button>
+<button aria-label="04 Ambre Riche" class="shade-pill w-8 h-8 rounded-full flex items-center justify-center transition-all bg-[#8C5E3C] shadow-sm" onclick="selectShade('04 Ambre Riche', '#8C5E3C', 3)"></button>
+<button aria-label="05 Ébène Profond" class="shade-pill w-8 h-8 rounded-full flex items-center justify-center transition-all bg-[#4F3526] shadow-sm" onclick="selectShade('05 Ébène Profond', '#4F3526', 4)"></button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">shield_with_heart</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface">UVA / UVB / HEV</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lumière Bleue</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">water_drop</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface">Acide Hyaluronique</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Infusion 48h</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">pool</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface">Waterproof 80m</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Éco-responsable</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">spa</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface">Non-Comédogène</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Testé dermato</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<div class="bg-surface-container-low rounded-xl overflow-hidden transition-all">
+<button class="w-full px-4 py-3.5 flex items-center justify-between text-left focus:outline-none" onclick="toggleAccordion('acc-1')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_fix_high</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Rituel &amp; Application Cernes</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-acc-1">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-2" id="acc-1">
+<p>Appliquez chaque matin sur visage et cou après vos soins quotidiens. Sa texture fluide soyeuse s'étire uniformément sans migrer dans les ridules.</p>
+<p class="font-medium text-on-surface">Astuce Cernes &amp; Teint :</p>
+<p>Pour le fini teinté, tapotez délicatement sur le contour de l’œil pour illuminer le regard sans figer la matière.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden transition-all">
+<button class="w-full px-4 py-3.5 flex items-center justify-between text-left focus:outline-none" onclick="toggleAccordion('acc-2')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">biotech</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Formule Propre &amp; Clean Beauty</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-acc-2">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-2" id="acc-2">
+<p>Formulé sans octinoxate, sans oxybenzone, sans parabènes ni parfum de synthèse. Respectueux des coraux marins et certifié hypoallergénique.</p>
+<div class="bg-surface-container p-2.5 rounded-lg font-label-sm text-label-sm text-on-surface">
+            Actifs majeurs : Filtres minéraux micro-micronisés, Niacinamide 3%, Complexe d’Ectoïne réparatrice, Peptides de riz botaniques.
+          </div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden transition-all">
+<button class="w-full px-4 py-3.5 flex items-center justify-between text-left focus:outline-none" onclick="toggleAccordion('acc-3')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Livraison &amp; Retours Offerts</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="icon-acc-3">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1.5" id="acc-3">
+<p>Expédition sous 24h avec emballage signature parfumé et échantillons sur-mesure.</p>
+<p>Retours gratuits sous 30 jours, même flacon entamé.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md px-margin py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] flex flex-col gap-1.5 pb-safe">
+<div class="flex items-center gap-3">
+<div class="flex items-center bg-surface-container-high rounded-lg p-1">
+<button aria-label="Diminuer" class="w-8 h-9 flex items-center justify-center text-on-surface hover:text-secondary active:scale-90 transition-transform" onclick="adjustQuantity(-1)">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="w-6 text-center font-label-lg text-label-lg text-on-surface" id="product-quantity">1</span>
+<button aria-label="Augmenter" class="w-8 h-9 flex items-center justify-center text-on-surface hover:text-secondary active:scale-90 transition-transform" onclick="adjustQuantity(1)">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<button class="flex-1 h-12 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform" id="add-to-cart-btn" onclick="addToCart()">
+<span class="material-symbols-outlined text-[18px]" id="cart-icon">shopping_bag</span>
+<span id="cart-btn-label">Ajouter au Panier • <span id="dynamic-price">48,00 DT</span></span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm tracking-wide">Livraison Colissimo offerte dès 60 DT d’achat</span>
+</div>
+</div>
+</div>
+<script>
+  let currentQty = 1;
+  const unitPrice = 48.0;
+  let isWishlisted = false;
+
+  const galleryImages = [
+    "placeholder",
+    "placeholder",
+    "placeholder"
+  ];
+
+  function switchGallery(index) {
+    const mainImg = document.getElementById('main-product-img');
+    mainImg.style.opacity = '0.3';
+    setTimeout(() => {
+      mainImg.src = galleryImages[index];
+      mainImg.style.opacity = '1';
+    }, 150);
+
+    for (let i = 0; i < 3; i++) {
+      const dot = document.getElementById(`dot-${i}`);
+      const thumb = document.getElementById(`thumb-${i}`);
+      if (i === index) {
+        dot.className = "w-1.5 h-1.5 rounded-full bg-primary";
+        thumb.classList.remove('opacity-60');
+        thumb.classList.add('ring-1', 'ring-primary');
+      } else {
+        dot.className = "w-1.5 h-1.5 rounded-full bg-outline-variant";
+        thumb.classList.add('opacity-60');
+        thumb.classList.remove('ring-1', 'ring-primary');
+      }
+    }
+  }
+
+  function selectFinish(type) {
+    const btnInvisible = document.getElementById('btn-finish-invisible');
+    const btnTinted = document.getElementById('btn-finish-tinted');
+    const iconInvisible = document.getElementById('icon-check-invisible');
+    const iconTinted = document.getElementById('icon-check-tinted');
+    const shadeContainer = document.getElementById('shade-selector-container');
+    const finishBadge = document.getElementById('selected-finish-badge');
+
+    if (type === 'invisible') {
+      btnInvisible.className = "flex flex-col items-start p-3 rounded-lg text-left transition-all bg-primary text-on-primary shadow-sm";
+      btnTinted.className = "flex flex-col items-start p-3 rounded-lg text-left transition-all bg-surface-container text-on-surface shadow-sm";
+      iconInvisible.classList.remove('opacity-0');
+      iconTinted.classList.add('opacity-0');
+      shadeContainer.classList.add('hidden');
+      shadeContainer.classList.remove('flex');
+      finishBadge.innerText = "100% Invisible";
+    } else {
+      btnInvisible.className = "flex flex-col items-start p-3 rounded-lg text-left transition-all bg-surface-container text-on-surface shadow-sm";
+      btnTinted.className = "flex flex-col items-start p-3 rounded-lg text-left transition-all bg-primary text-on-primary shadow-sm";
+      iconInvisible.classList.add('opacity-0');
+      iconTinted.classList.remove('opacity-0');
+      shadeContainer.classList.remove('hidden');
+      shadeContainer.classList.add('flex');
+      finishBadge.innerText = "Teinté Éclat";
+    }
+  }
+
+  function selectShade(shadeName, hexCode, index) {
+    document.getElementById('shade-name').innerText = shadeName;
+    const pills = document.querySelectorAll('.shade-pill');
+    pills.forEach((p, idx) => {
+      if (idx === index) {
+        p.classList.add('ring-2', 'ring-offset-2', 'ring-primary');
+      } else {
+        p.classList.remove('ring-2', 'ring-offset-2', 'ring-primary');
+      }
+    });
+  }
+
+  function toggleAccordion(id) {
+    const content = document.getElementById(id);
+    const icon = document.getElementById(`icon-${id}`);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function adjustQuantity(delta) {
+    currentQty = Math.max(1, currentQty + delta);
+    document.getElementById('product-quantity').innerText = currentQty;
+    const total = (currentQty * unitPrice).toFixed(2).replace('.', ',') + ' DT';
+    document.getElementById('dynamic-price').innerText = total;
+  }
+
+  function addToCart() {
+    const btn = document.getElementById('add-to-cart-btn');
+    const label = document.getElementById('cart-btn-label');
+    const icon = document.getElementById('cart-icon');
+
+    label.innerText = 'Ajouté avec succès !';
+    icon.innerText = 'check';
+    btn.classList.add('bg-secondary');
+
+    setTimeout(() => {
+      const total = (currentQty * unitPrice).toFixed(2).replace('.', ',') + ' DT';
+      label.innerHTML = `Ajouter au Panier • <span id="dynamic-price">${total}</span>`;
+      icon.innerText = 'shopping_bag';
+      btn.classList.remove('bg-secondary');
+    }, 1800);
+  }
+
+  document.getElementById('wishlist-btn').addEventListener('click', function() {
+    isWishlisted = !isWishlisted;
+    const icon = document.getElementById('wishlist-icon');
+    if (isWishlisted) {
+      icon.innerText = 'favorite';
+      icon.classList.add('text-error');
+      icon.style.fontVariationSettings = "'FILL' 1";
+    } else {
+      icon.innerText = 'favorite_border';
+      icon.classList.remove('text-error');
+      icon.style.fontVariationSettings = "'FILL' 0";
+    }
+  });
+</script></main></body></html>
